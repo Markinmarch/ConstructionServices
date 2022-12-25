@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-{%load static%}
+{% load static %}
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -7,12 +7,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
+<body style = "background-color:grey">
     <div>
-        <link rel = "stylesheet" href = "{% static 'first.css' %}"/>
-        
-        <p>Строительствo</br><img src = "{% static 'build.jpg' %}"/></p>
-        
+        <link rel = "stylesheet" href = "{% static 'first.css' %}"/> 
+        <p>Строительствo</br>
+        <img src = "{% static 'stroitelstvo1.jpg' %}"/>
+        </p>
+</div>
+    <div>
+        <link rel = "stylesheet" href = "{% static 'second.css' %}"/> 
+        <p>Отопление</br>
+        <img src = "{% static 'otoplenie.jpg' %}"/>
+        </p>
 </div>
 </body>
 </html>
