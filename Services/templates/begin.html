@@ -6,19 +6,39 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel = "stylesheet" href = {% static 'first.css' %}/>
+    <style>
+        body {
+            background: url({% static 'fon.jpg' %});
+            background-repeat: no-repeat;
+            background-size: cover;
+            {% comment %} background-position: center; {% endcomment %}
+            background-attachmant: fixed;
+        }
+    </style>
 </head>
-<body style = "background-color:grey">
+<body>
     <div>
-        <link rel = "stylesheet" href = "{% static 'first.css' %}"/> 
-        <p>Строительствo</br>
-        <img src = "{% static 'stroitelstvo1.jpg' %}"/>
+        <p class = "start-text">Строительствo</br>
+        <img src = {% static 'stroitelstvo1.jpg' %}/>
         </p>
-</div>
-    <div>
-        <link rel = "stylesheet" href = "{% static 'second.css' %}"/> 
-        <p>Отопление</br>
-        <img src = "{% static 'otoplenie.jpg' %}"/>
+
+        <p class = "start-text"; style = "color: red">Отопление</br>
+        <img src = {% static 'otoplenie.jpg' %}/>
         </p>
+
+        <p class = "start-text"; style = "color: blue">Демонтаж</br>
+        <img src = {% static 'demontazh.jpg' %}/>
+        </p>
+
+        <p class = "start-text"; style = "color: yellow">Дизайн</br>
+        <img src = {% static 'design.jpg' %}/>
+        </p>
+
+        <p class = "start-text"; style = "color: white">Электромонтаж</br>
+        <img src = {% static 'electro.jpg' %}/>
+        </p>
+
 </div>
 </body>
 </html>
