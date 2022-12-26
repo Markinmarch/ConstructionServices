@@ -1,3 +1,33 @@
+body {
+    background: url(fon1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+a.button-reg {
+    color: #fff;
+    text-decoration: none;
+    user-select: none;
+    background: rgb(62, 61, 61);
+    padding: 10px 24px;
+    transition: 0.2s;
+    border: 2px solid;
+    border-color: rgb(0, 0, 0);
+    border-radius: 10px;
+    float: right;
+    margin: 2px;
+} 
+
+a.button-reg:hover {
+    background: rgb(210, 200, 199);
+    color: black;
+}
+
+a.button-reg:active {
+    background: linear-gradient(rgb(0, 0, 0), rgb(71, 71, 71) 20%, rgb(174, 174, 174) 40%, rgb(255, 255, 255));
+}
+
 .start-text {
     text-align: center;
     color: green;
