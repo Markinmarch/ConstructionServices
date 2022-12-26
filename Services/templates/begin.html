@@ -6,21 +6,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel = "stylesheet" href = {% static 'first.css' %}/>
-    <style>
-        body {
-            background: url({% static 'fon.jpg' %});
-            background-repeat: no-repeat;
-            background-size: cover;
-            {% comment %} background-position: center; {% endcomment %}
-            background-attachmant: fixed;
-        }
-    </style>
+    <link rel = "stylesheet" href = {% static 'first.css' %} type = "text/css"/>
 </head>
 <body>
+    <div style = "padding: 10px;">
+        <a href = "#" class = "button-reg">Регистрация</a>
+        <a href = "#" class = "button-reg">Вход</a>
+    </div>
     <div>
         <p class = "start-text">Строительствo</br>
-        <img src = {% static 'stroitelstvo1.jpg' %}/>
+        <img src = {% static 'stroitelstvo2.jpg' %}/>
         </p>
 
         <p class = "start-text"; style = "color: red">Отопление</br>
@@ -28,17 +23,16 @@
         </p>
 
         <p class = "start-text"; style = "color: blue">Демонтаж</br>
-        <img src = {% static 'demontazh.jpg' %}/>
+        <img src = {% static 'demontazh1.jpg' %}/>
         </p>
 
         <p class = "start-text"; style = "color: yellow">Дизайн</br>
-        <img src = {% static 'design.jpg' %}/>
+        <img src = {% static 'design1.jpg' %}/>
         </p>
 
         <p class = "start-text"; style = "color: white">Электромонтаж</br>
-        <img src = {% static 'electro.jpg' %}/>
+        <img src = {% static 'electro1.jpg' %}/>
         </p>
-
-</div>
+    </div>
 </body>
 </html>
