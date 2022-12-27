@@ -1,2 +1,2 @@
 passwords.ini
-.pyc
+*.pyc
