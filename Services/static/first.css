@@ -12,8 +12,8 @@ a.button-reg {
     background: rgb(62, 61, 61);
     padding: 10px 24px;
     transition: 0.2s;
-    border: 2px solid;
-    border-color: rgb(0, 0, 0);
+    /* border: 2px solid; */
+    /* border-color: rgb(0, 0, 0); */
     border-radius: 10px;
     float: right;
     margin: 2px;
@@ -21,7 +21,7 @@ a.button-reg {
 
 a.button-reg:hover {
     background: rgb(210, 200, 199);
-    color: black;
+    /* color: black; */
 }
 
 a.button-reg:active {
@@ -34,3 +34,4 @@ a.button-reg:active {
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 20px;
 }
+

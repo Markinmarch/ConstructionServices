@@ -6,13 +6,17 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel = "stylesheet" href = {% static 'first.css' %} type = "text/css"/>
 </head>
 <body>
-    <div style = "padding: 10px;">
-        <a href = "#" class = "button-reg">Регистрация</a>
-        <a href = "#" class = "button-reg">Вход</a>
-    </div>
+    <link rel = "stylesheet" href = {% static 'first.css' %} type = "text/css"/>
+    <nav>
+        <ul style = "list-style-type: none; margin: 0; padding: 0; overflow: hidden; background-color: #333;">
+            <a href = "#" class = "button-reg">Регистрация</a>
+            <a href = "#" class = "button-reg">Вход</a>
+            <a href = "#" class = "button-reg">Контакты</a>
+            <a href = "#" class = "button-reg">Telegramm</a>
+        </ul>
+    </nav>
     <div>
         <p class = "start-text">Строительствo</br>
         <img src = {% static 'stroitelstvo2.jpg' %}/>
