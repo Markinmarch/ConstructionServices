@@ -1,4 +1,14 @@
+nav {
+    list-style-type: none;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    letter-spacing: 2px;
+    overflow: hidden;
+    background-color: #333;
+}
 body {
+    margin: 0px;
     background: url(fon1.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -16,12 +26,12 @@ a.button-reg {
     /* border-color: rgb(0, 0, 0); */
     border-radius: 10px;
     float: right;
-    margin: 2px;
+    margin: 8px;
 } 
 
 a.button-reg:hover {
     background: rgb(210, 200, 199);
-    /* color: black; */
+    color: black;
 }
 
 a.button-reg:active {
@@ -35,3 +45,28 @@ a.button-reg:active {
     font-size: 20px;
 }
 
+a.icons-work {
+    display: inline-block;
+    text-align: left;
+    width: max-content;
+    /* color: #fff; */
+    text-decoration: none;
+    user-select: none;
+    /* background: rgb(62, 61, 61); */
+    padding: 10px 24px;
+    transition: 0.2s;
+    /* border: 2px solid; */
+    /* border-color: rgb(0, 0, 0); */
+    border-radius: 10px;
+    /* float: right; */
+    margin: 8px;
+}
+
+a.icons-work:hover {
+    background: rgb(210, 200, 199);
+    color: black;
+}
+
+a.icons-work:active {
+    background: linear-gradient(rgb(0, 0, 0), rgb(71, 71, 71) 20%, rgb(174, 174, 174) 40%, rgb(255, 255, 255));
+}

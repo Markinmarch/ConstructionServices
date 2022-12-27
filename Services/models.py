@@ -15,3 +15,13 @@ class Works(models.Model):
         
     def __str__(self):
         return self.name_work + '-->' + self.price
+
+class User_Client(models.Model):
+    name_client = models.CharField(max_length=50, verbose_name='Имя клиента')
+    second_name_client = models.CharField(max_length=50, verbose_name='Фамилия клиента')
+    email_client = models.EmailField((""), max_length=254)
+    telephone_client = models.PhoneNumberField(_(""))
+
+class User_Client_Orders(models.Model):
+    
+

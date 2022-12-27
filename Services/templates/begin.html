@@ -7,36 +7,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <link rel = "stylesheet" href = {% static 'first.css' %} type = "text/css"/>
     <nav>
-        <ul style = "list-style-type: none; margin: 0; padding: 0; overflow: hidden; background-color: #333;">
-            <a href = "#" class = "button-reg">Регистрация</a>
-            <a href = "#" class = "button-reg">Вход</a>
-            <a href = "#" class = "button-reg">Контакты</a>
-            <a href = "#" class = "button-reg">Telegramm</a>
-        </ul>
+        <a href = "#" class = "button-reg">Регистрация</a>
+        <a href = "#" class = "button-reg">Вход</a>
+        <a href = "#" class = "button-reg">Контакты</a>
+        <a href = "#" class = "button-reg">Telegramm</a>
+        <a href = "#" class = "button-reg">Сотрудничество</a>
     </nav>
-    <div>
+    <section>
+        <a href = "#" class = "icons-work">
         <p class = "start-text">Строительствo</br>
         <img src = {% static 'stroitelstvo2.jpg' %}/>
-        </p>
+        </p></a>
 
+        <a href = "#" class = "icons-work">
         <p class = "start-text"; style = "color: red">Отопление</br>
         <img src = {% static 'otoplenie.jpg' %}/>
-        </p>
+        </p></a>
 
+        <a href = "#" class = "icons-work">
         <p class = "start-text"; style = "color: blue">Демонтаж</br>
         <img src = {% static 'demontazh1.jpg' %}/>
-        </p>
+        </p></a>
 
+        <a href = "#" class = "icons-work">
         <p class = "start-text"; style = "color: yellow">Дизайн</br>
         <img src = {% static 'design1.jpg' %}/>
-        </p>
+        </p></a>
 
+        <a href = "#" class = "icons-work">
         <p class = "start-text"; style = "color: white">Электромонтаж</br>
         <img src = {% static 'electro1.jpg' %}/>
-        </p>
-    </div>
+        </p></a>
+    </section>
 </body>
 </html>
