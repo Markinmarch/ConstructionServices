@@ -11,17 +11,25 @@ class Sevices(models.Model):
 # Модель, в котору указывается конкретный вид работ с ценой, например: кладка камня, установка унитаза или смесителей, поклейка обоев и пр.
 class Works(models.Model):
     name_work = models.ForeignKey(Sevices, on_delete=models.CASCADE, verbose_name='Наименование работ')
-    price = models.CharField(max_length=50, null = True, verbose_name='Цена работ')
+    price = models.CharField(max_length=50, verbose_name='Цена работ')
         
     def __str__(self):
-        return self.name_work + '-->' + self.price
+        return {
+            "name_work": self.name_work,
+            "price": self.price,
+        }
 
 class User_Client(models.Model):
     name_client = models.CharField(max_length=50, verbose_name='Имя клиента')
     second_name_client = models.CharField(max_length=50, verbose_name='Фамилия клиента')
-    email_client = models.EmailField((""), max_length=254)
-    telephone_client = models.PhoneNumberField(_(""))
+    phone = models.CharField(max_length=12, blank=True, null = True, verbose_name='Телефон клиента')
+    email = models.EmailField(max_length=254, verbose_name='Электронная почта')
+    orders = models.ForeignKey(Works, on_delete=models.PROTECT, verbose_name='Заказы')
 
-class User_Client_Orders(models.Model):
-    
-
+    def __str__(self):
+        return {
+            "name": self.name_client,
+            "second_name": self.second_name_client,
+            "phone": self.phone,
+            "email": self.email,
+            }

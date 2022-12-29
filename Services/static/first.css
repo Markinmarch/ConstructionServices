@@ -40,20 +40,20 @@ a.button-reg:active {
 
 .start-text {
     text-align: center;
-    color: green;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size: 20px;
+    letter-spacing: 5px;
 }
 
 a.icons-work {
-    display: inline-block;
-    text-align: left;
-    width: max-content;
+    display: inline-table;
+    text-align: center;
+    width: 300px;
     /* color: #fff; */
     text-decoration: none;
     user-select: none;
     /* background: rgb(62, 61, 61); */
-    padding: 10px 24px;
+    padding: 10px 40px;
     transition: 0.2s;
     /* border: 2px solid; */
     /* border-color: rgb(0, 0, 0); */
