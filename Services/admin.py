@@ -1,12 +1,12 @@
 from django.contrib import admin
 
-from Services.models import Sevices, Works
+from Services.models import Services, User_Client
 
 # Register your models here.
-@admin.register(Sevices)
+@admin.register(Services)
 class ServicesAdmin(admin.ModelAdmin):
     pass
 
-@admin.register(Works)
-class WorksAdmin(admin.ModelAdmin):
+@admin.register(User_Client)
+class User_ClientAdmin(admin.ModelAdmin):
     pass
