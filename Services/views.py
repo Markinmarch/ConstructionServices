@@ -1,6 +1,6 @@
 from django.shortcuts import redirect, render, HttpResponse
 
-from Services.models import Services
+from .models import Client
 
 # Create your views here.
 
