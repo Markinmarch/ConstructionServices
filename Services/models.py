@@ -23,10 +23,10 @@ class Work(models.Model):
     price = models.IntegerField(null = True, verbose_name = 'Цена работ')
 
     def __str__(self):
-        return self.work
+        return f'{self.work} ₽{self.price}'
 
 class Order(models.Model):
     work_order = models.ManyToManyField(Work, null=True)
 
     def __str__(self):
-        return self.id
+        return f'{self.work_order}'
