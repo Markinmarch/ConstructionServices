@@ -24,17 +24,16 @@ class Work(models.Model):
     price = models.DecimalField(max_digits=8, decimal_places=2, null = True, verbose_name = 'Цена работ')
     
     def __str__(self):
-        return f'{self.work} ₽{self.price}'
+        return f'{self.work} ₽'
 
 class ForInlineOrder(models.Model):
     client = models.ForeignKey(Client, on_delete=models.CASCADE, related_name='client', null = True)
-    # total_price = Work.objects.aggregate(Sum('price'))['price__sum']
+    total_price = Work.objects.aggregate(Sum('price'))['price__sum']
 
     def __str__(self):
         return f'{self.id} - {self.client}'
 
 class Order(models.Model):
     order = models.ForeignKey(Work, on_delete=models.CASCADE, related_name='order', null = True)
-    total_price = Work.objects.aggregate(Sum('price'))['price__sum']
     connection = models.ForeignKey(ForInlineOrder, on_delete=models.CASCADE, null = True)
     # total_price = 'in_process'
