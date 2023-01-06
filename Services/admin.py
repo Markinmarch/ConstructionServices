@@ -1,10 +1,9 @@
 from django.contrib import admin
-from .models import Client, ForInlineOrder, Order, Service, Work
+from .models import Client, Order, Service, Work
 
-# Register your models here.
-class OrderInline(admin.TabularInline):
-    model = Order
-    extra = 0
+# class WorkInline(admin.TabularInline):
+#     model = Work
+#     extra = 0
 
 @admin.register(Client)
 class ClientAdmin(admin.ModelAdmin):
@@ -14,18 +13,18 @@ class ClientAdmin(admin.ModelAdmin):
 class ServiceAdmin(admin.ModelAdmin):
     pass
 
+
+
 @admin.register(Work)
 class WorkAdmin(admin.ModelAdmin):
-    list_display = ['service', 'work', 'price']
-    list_filter = ['service']
+    # inlines = [OrderInline,]
+    # list_display = ['work', 'price']
+    # list_filter = ['service']
+    pass
 
-@admin.register(ForInlineOrder)
-class ForInlineOrderAdmin(admin.ModelAdmin):
-    inlines = [OrderInline,]
-    # list_display = ['price']
-
+# @admin.register(Order)
+# class OrderAdmin(admin.ModelAdmin):
+#     inlines = [WorkInline,]
 @admin.register(Order)
 class OrderAdmin(admin.ModelAdmin):
-    # list_display = ['order', 'work', 'price']
-    # list_filter = ['service']
     pass

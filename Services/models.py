@@ -19,9 +19,16 @@ class Service(models.Model):
         return self.service
 
 class Work(models.Model):
-    service = models.ForeignKey(Service, on_delete=models.CASCADE, related_name='work', verbose_name='Наименование услуги', null = True)
     work = models.CharField(max_length = 50, verbose_name = 'Наименование работ',blank=True, null = True)
+    service = models.ForeignKey(Service, on_delete=models.CASCADE, null=True)
     price = models.DecimalField(max_digits=8, decimal_places=2,blank=True, null = True, verbose_name = 'Цена работ', )
-    
-    def __str__(self):
-        return f'{self.work} ₽'
+    # connection = models.ForeignKey(Order, on_delete=models.CASCADE, null=True)
+
+class Order(models.Model):
+    def num_order():
+        num_order = datetime.now().strftime('%d%m%Y%M')
+        return f'{num_order}'
+
+    order = models.CharField(default = num_order, null = True, max_length=20)
+    client_name = models.ForeignKey(Client, on_delete=models.PROTECT, null=True)
+    qweqweqwe = models.ForeignKey(Work, on_delete=models.CASCADE, null=True)
