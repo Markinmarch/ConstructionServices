@@ -16,9 +16,16 @@ class ServiceAdmin(admin.ModelAdmin):
 
 @admin.register(Work)
 class WorkAdmin(admin.ModelAdmin):
-    list_display = ['service', 'work', 'price',]
+    list_display = ['service', 'work', 'price']
     list_filter = ['service']
 
 @admin.register(ForInlineOrder)
 class ForInlineOrderAdmin(admin.ModelAdmin):
     inlines = [OrderInline,]
+    # list_display = ['price']
+
+@admin.register(Order)
+class OrderAdmin(admin.ModelAdmin):
+    # list_display = ['order', 'work', 'price']
+    # list_filter = ['service']
+    pass
