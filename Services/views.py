@@ -6,3 +6,7 @@ from django.shortcuts import redirect, render, HttpResponse
 
 def intro(request):
    return render(request, 'begin.html')
+
+def registration(request):
+   return render(request, 'register.html')
+   # return HttpResponse(print('REGISTRATION'))
