@@ -21,5 +21,5 @@ from Services.views import intro, registration
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', intro),
-    path('registration/', registration)
+    path('registration/', registration, name='registration')
 ]
