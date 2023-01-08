@@ -1,18 +1,18 @@
 # from django.contrib import admin
-from .models import Client, ListClients, Order, Item
+from .models import ConnectionOrderItem, ListClients, Order, Item
 from django.contrib import admin
 
 @admin.register(ListClients)
 class ListClientsAdmin(admin.ModelAdmin):
     list_display = ['first_name', 'second_name', 'phone', 'email']
 
-class InlineClient(admin.StackedInline):
-    model = Client  
+class InlineConnectionOrderItem(admin.StackedInline):
+    model = ConnectionOrderItem  
     extra = 1
 
 @admin.register(Order)
 class OrderAdmin(admin.ModelAdmin):
-    inlines = [InlineClient,]
+    inlines = [InlineConnectionOrderItem,]
     list_display = ['order', 'client', 'total_price']
 
 

@@ -24,7 +24,7 @@ class Order(models.Model):
 
     def total_price(self):
         return sum([
-            amount.total() for amount in Client.objects.filter(client=self)
+            amount.total() for amount in ConnectionOrderItem.objects.filter(client=self)
         ])
 
     def __str__(self):
@@ -40,7 +40,7 @@ class Item(models.Model):
         return f'{self.item_name}'
 
 # таблица связывающая
-class Client(models.Model):
+class ConnectionOrderItem(models.Model):
 
     item_name = models.ForeignKey(Item, on_delete=models.CASCADE, related_name='client')
     client = models.ForeignKey(Order, on_delete=models.CASCADE, related_name='var_client')
