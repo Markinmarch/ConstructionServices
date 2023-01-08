@@ -1,5 +1,6 @@
 from django.db import models
 from datetime import datetime
+from .forms import ClientContactForm
 
 # таблица создания клиентов
 class ListClients(models.Model):
