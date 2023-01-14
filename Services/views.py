@@ -1,5 +1,6 @@
 from django.shortcuts import redirect, render, HttpResponse
-from .forms import ClientContactForm
+from .forms import UserRegisterForm
+from django.contrib import messages
 
 # from .models import Client
 
@@ -9,17 +10,13 @@ def intro(request):
    return render(request, 'begin.html')
 
 def registration(request):
-    # form = ClientContactForm(request.POST)
-    # if form.is_valid(): request.method == 'POST'
-
-    # return render(request, 'register.html')
     if request.method == 'POST':
-        client_form = ClientContactForm(request.POST)
-        if client_form.is_valid():
-            new_client = client_form.save(commit=False)
-            new_client.set_password(client_form.cleaned_data['password'])
-            new_client.save()
-            return render(request, 'register_done.html', {'new_client': new_client})
+        form = UserRegisterForm(request.POST)
+    if form.is_valid():
+        form.save()
+        username = form.cleaned_data.get('username')
+        messages.success(request, f'Создан аккаунт {username}')
+        return redirect('home')
     else:
-        client_form = ClientContactForm()
-    return render(request, 'registeration.html', {'client_form':client_form})
+        form = UserRegisterForm()
+        return render(request, 'registration.html', {'form': form})
