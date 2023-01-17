@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import include, path
-from Services.views import intro, registration
+from Services.views import demo, intro, registration
 from django.views.generic.edit import CreateView
 from django.contrib.auth.forms import UserCreationForm
 
@@ -27,4 +27,5 @@ urlpatterns = [
         form_class = UserCreationForm,
         success_url = '/'
         )),
+    path('demo/', demo)
 ]

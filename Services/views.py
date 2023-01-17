@@ -1,5 +1,7 @@
 from django.shortcuts import redirect, render, HttpResponse
 from django.contrib.auth.forms import UserCreationForm
+from rest_framework.decorators import api_view
+from rest_framework.response import Response
 
 def intro(request):
     return render(request, 'begin.html')
@@ -27,3 +29,8 @@ def registration(request):
         data['form'] = form
         # Рендаринг страницы
         return render(request, 'registration.html', data)
+
+@api_view(['GET'])
+def demo(request):
+    data = {'massage':'Hello'}
+    return Response(data)
