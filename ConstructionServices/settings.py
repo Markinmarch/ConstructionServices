@@ -44,7 +44,6 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'Services',
-    'crispy_forms',
     'rest_framework',
 ]
 
@@ -141,3 +140,4 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 LOGIN_REDIRECT_URL = 'begin'
 
 LOGIN_URL = 'login'
+
